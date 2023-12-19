@@ -1,0 +1,3 @@
+<?php $__currentLoopData = $widgets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $widget): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php
+        $widgetData = \Juzaweb\CMS\Facades\HookAction::getWidgets($widget['widget'] ?? 'null');
+    ?> <?php if(empty($widgetData)): ?> <?php continue; ?> <?php endif; ?> <?php echo $sidebar->get('before_widget'); ?> <?php echo $widgetData['widget']->show($widget); ?> <?php echo $sidebar->get('after_widget'); ?> <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php /**PATH E:\Laragon\cms\modules\Backend\Providers/../resources/views/components/dynamic_sidebar.blade.php ENDPATH**/ ?>

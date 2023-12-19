@@ -1,0 +1,1 @@
+<?php echo e(Field::editor($model, 'content')); ?><?php /**PATH E:\Laragon\cms\modules\Backend\Providers/../resources/views/backend/post/components/editor.blade.php ENDPATH**/ ?>

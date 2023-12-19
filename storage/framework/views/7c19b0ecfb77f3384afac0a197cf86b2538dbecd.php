@@ -1,0 +1,5 @@
+<?php $__currentLoopData = $styles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $style): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php
+        $href = $style->get('src') .'?v='. $style->get('ver');
+    ?><link rel="stylesheet" type="text/css" href="<?php echo e($href); ?>" id="css-<?php echo e($style->get('key')); ?>"> <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> <?php $__currentLoopData = $scripts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $script): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php
+        $href = $script->get('src') .'?v='. $script->get('ver');
+    ?><script src="<?php echo e($href); ?>" id="js-<?php echo e($script->get('key')); ?>"></script><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php /**PATH E:\Laragon\cms\modules\Frontend\Providers/../resources/views/frontend/styles.blade.php ENDPATH**/ ?>

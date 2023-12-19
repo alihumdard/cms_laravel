@@ -1,0 +1,7 @@
+<?php $__currentLoopData = $data['form'] ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $input): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php if($input['type'] == 'container'): ?><h5><?php echo e(__($input['label'])); ?></h5> <?php $__currentLoopData = $input['children'] ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $child): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php
+                $child['data']['value'] = $value[$input['name']][$child['name']] ?? null;
+                $child['name'] = "blocks[{$contentKey}][{$key}][{$input['name']}][{$child['name']}]";
+            ?> <?php echo e(Field::fieldByType($child)); ?> <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> <?php else: ?> <?php
+            $input['data']['value'] = $value[$input['name']] ?? null;
+            $input['name'] = "blocks[{$contentKey}][{$key}][{$input['name']}]";
+        ?> <?php echo e(Field::fieldByType($input)); ?> <?php endif; ?> <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php /**PATH E:\Laragon\cms\modules\Backend\Providers/../resources/views/backend/page-block/block_form.blade.php ENDPATH**/ ?>

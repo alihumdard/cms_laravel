@@ -1,0 +1,6 @@
+<li class="dd-item" id="dd-item-<?php echo e($key); ?>" data-label="<?php echo e($block->get('label')); ?>"><div class="dd-handle"><span><?php echo e($block->get('label')); ?></span><div class="dd-nodrag"><div class="block-action-button"><a href="javascript:void(0)" class="show-form-block" ><i class="fa fa-edit"></i> <?php echo e(trans('cms::app.edit')); ?> </a> <a href="javascript:void(0)" class="remove-form-block text-danger" ><i class="fa fa-trash"></i> <?php echo e(trans('cms::app.delete')); ?> </a></div></div></div><div class="form-block-edit dd-nodrag box-hidden" id="page-block-<?php echo e($key); ?>"> <?php
+        $value = $value ?? [];
+        ?> <?php $__env->startComponent(
+            'cms::backend.page-block.block_form',
+            compact('data', 'key', 'contentKey', 'value')
+        ); ?> <?php echo $__env->renderComponent(); ?> <input type="hidden" name="blocks[<?php echo e($contentKey); ?>][<?php echo e($key); ?>][block]" value="<?php echo e($block->get('key')); ?>"></div></li><?php /**PATH E:\Laragon\cms\modules\Backend\Providers/../resources/views/backend/page-block/components/page_block_item.blade.php ENDPATH**/ ?>
